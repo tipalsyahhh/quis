@@ -9,7 +9,7 @@ body {
     font-family: Monospace;
 }
 
-.papan {
+.papan-home {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@ body {
 }
 
 .judul h3 {
-    font-size: 25px;
+    font-size: calc(600px * 0.04);
     font-weight: bold;
 }
 
@@ -86,15 +86,15 @@ body {
 @media (max-width: 768px) {
     .box {
         width: 100%;
-    }
+    } 
 
     .img-bg {
-        height: 400px;
+        height: calc(100vh * 0.30)
     }
 
     .img-janda,
     .img-janda2 {
-        height: 180px;
+        height: calc(100vh * 0.25)
     }
 
 }

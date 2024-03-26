@@ -18,3 +18,4 @@ VANTA.BIRDS({
     cohesion: 26.00,
     quantity: 3.00
 })
+
