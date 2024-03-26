@@ -53,13 +53,6 @@ body {
     font-weight: bold;
 }
 
-.janda {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    animation: fadeIn 4s ease-in-out;
-}
-
 .janda2 {
     position: fixed;
     top: 0;
@@ -76,7 +69,6 @@ body {
     }
 }
 
-.img-janda,
 .img-janda2 {
     height: 200px;
 }
@@ -96,7 +88,6 @@ body {
         height: calc(100vh * 0.30)
     }
 
-    .img-janda,
     .img-janda2 {
         height: calc(100vh * 0.25)
     }

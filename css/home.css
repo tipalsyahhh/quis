@@ -52,15 +52,8 @@ body {
     height: calc(100px);
 }
 
-.janda {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    animation: fadeIn 4s ease-in-out;
-}
-
 .janda2 {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     animation: fadeIn 4s ease-in-out;
@@ -84,8 +77,6 @@ body {
 @media (max-width: 768px) {
     .isi-container {
         width: 100%;
-        max-height: calc(100vh * 0.48);
-        overflow-y: auto;
         display: block;
     }
 
