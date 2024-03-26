@@ -1,7 +1,6 @@
 body {
     padding: 0;
     margin: 0;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +9,7 @@ body {
 }
 
 .papan-home {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
