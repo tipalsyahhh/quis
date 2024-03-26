@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     height: 100vh;
+    font-family: Monospace;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,12 +13,11 @@ body {
 }
 
 .isi-container {
-    border: 1px solid black;
     width: calc(600px - 20px);
     height: 500px;
     padding: 10px;
-    display: flex;
     flex-wrap: wrap;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -30,6 +30,9 @@ body {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.219);
     height: calc(500px * 0.50 - 10px);
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-soal2,
@@ -37,5 +40,68 @@ body {
     margin-left: 20px;
 }
 
+.quis {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
 
+.img-soal {
+    height: calc(100px);
+}
 
+.janda {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: fadeIn 4s ease-in-out;
+}
+
+.janda2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: fadeIn 4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.img-janda,
+.img-janda2 {
+    height: 180px;
+}
+
+@media (max-width: 768px) {
+    .isi-container {
+        width: 100%;
+        max-height: calc(100vh * 0.48);
+        overflow-y: auto;
+        display: block;
+    }
+
+    .card-soal1,
+    .card-soal2,
+    .card-soal3,
+    .card-soal4 {
+        height: calc(500px * 0.40 - 10px);
+        margin-bottom: 10px;
+    }
+
+    .card-soal2,
+    .card-soal4 {
+        margin-left: 0;
+    }
+
+    .img-janda,
+    .img-janda2 {
+        height: calc(100vh * 0.18); /* Sesuaikan tinggi gambar dengan 15% dari tinggi layar */
+    }
+}

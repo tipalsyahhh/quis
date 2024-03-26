@@ -83,9 +83,14 @@ body {
 }
 
 @media (max-width: 768px) {
+    html {
+        scroll-behavior: auto;
+    }
+    
     .box {
         width: 100%;
         position: fixed;
+        scroll-margin: 0;
     } 
 
     .img-bg {
