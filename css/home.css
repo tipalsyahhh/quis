@@ -13,6 +13,7 @@ body {
 .container h3 {
     margin-bottom: calc(100vh * -0.15);
     font-size: 20px;
+    animation: fadeIn 4s ease-in-out;
 }
 .isi-container {
     width: calc(600px - 20px);
@@ -36,6 +37,8 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #f1c037;
+    overflow: hidden;
+    animation: fadeIn 4s ease-in-out;
 }
 
 .card-soal2,
