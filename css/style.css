@@ -31,7 +31,7 @@ body {
     width: 250px;
     height: 15px;
     border: 1px solid #fff;
-    background-color: #007e6d;
+    background-color: #f1c037;
     margin-bottom: 15px;
     border-radius: 50px;
     color: #fff;
@@ -70,7 +70,7 @@ body {
 }
 
 .img-janda2 {
-    height: 200px;
+    height: 250px;
 }
 
 @media (max-width: 768px) {
