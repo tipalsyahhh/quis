@@ -1,5 +1,4 @@
 let currentSection = 1;
-
 function prevSection() {
     if (currentSection > 1) {
         currentSection--;
@@ -13,7 +12,7 @@ function nextSection() {
         currentSection++;
         showSection(currentSection);
     } else if (currentSection === sections.length && validateSection(currentSection)) {
-        submitQuiz(); // Panggil fungsi submitQuiz jika semua pertanyaan telah dijawab
+        submitQuiz();
     } else {
         alert("Please answer the question before proceeding.");
     }
@@ -49,7 +48,6 @@ function validateSection(n) {
     }
     return isChecked;
 }
-
 function submitQuiz() {
     let sections = document.querySelectorAll(".soal section");
     let totalQuestions = sections.length;
@@ -58,27 +56,17 @@ function submitQuiz() {
     for (let i = 0; i < sections.length; i++) {
         let sectionId = `section${i + 1}`;
         let selectedAnswer = getSelectedAnswer(sectionId);
-        let correctAnswer = getCorrectAnswer(i); // Panggil fungsi untuk mendapatkan jawaban yang benar
+        let correctAnswer = getCorrectAnswer(i);
         if (selectedAnswer === correctAnswer) {
             correctAnswers++;
         }
     }
-
-    // Skor dihitung dengan mengalikan jumlah jawaban yang benar dengan nilai per jawaban yang benar
-    let score = correctAnswers * 20; // Misalnya, setiap jawaban yang benar bernilai 20 poin
-
-    // Tampilkan skor dalam elemen HTML dengan ID "scoreDisplay"
+    let score = correctAnswers * 20;
     let scoreDisplay = document.getElementById("scoreDisplay");
-    scoreDisplay.innerHTML = "Quiz submitted! Your score: " + score + "/100";
-
-    // Tampilkan modal setelah menampilkan skor
+    scoreDisplay.innerHTML = "Your score: " + score + "/100";
     let modal = document.getElementById("scoreModal");
     modal.style.display = "block";
 }
-
-
-
-
 function getSelectedAnswer(sectionId) {
     let radioButtons = document.querySelectorAll(`#${sectionId} input[type='radio']`);
     for (let i = 0; i < radioButtons.length; i++) {
@@ -86,12 +74,9 @@ function getSelectedAnswer(sectionId) {
             return radioButtons[i].value;
         }
     }
-    return null; // Kembalikan null jika tidak ada jawaban yang dipilih
+    return null;
 }
-
-// Fungsi untuk mendapatkan jawaban yang benar berdasarkan nomor pertanyaan
 function getCorrectAnswer(questionNumber) {
-    // Isilah dengan logika untuk mengembalikan jawaban yang benar sesuai nomor pertanyaan
     switch (questionNumber) {
         case 0:
             return "a";
@@ -107,3 +92,30 @@ function getCorrectAnswer(questionNumber) {
 }
 
 showSection(currentSection);
+
+let timerInterval;
+function startTimer(duration, display) {
+    let timer = duration;
+    let minutes, seconds;
+    timerInterval = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            clearInterval(timerInterval);
+            display.textContent = "Time's up!";
+            submitQuiz();
+        }
+    }, 1000);
+}
+window.onload = function () {
+    let fiveMinutes = 60 * 5;
+    let display = document.getElementById("timer");
+    startTimer(fiveMinutes, display);
+};
+

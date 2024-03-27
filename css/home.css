@@ -36,7 +36,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f1c037;
+    background-color: #293b8b;
     overflow: hidden;
     animation: fadeIn 4s ease-in-out;
 }
