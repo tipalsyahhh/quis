@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sejarah.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="soal">
+                <section id="section1">
+                    <p>Pada tahun berapa VOC mendirikan Batavia (kini Jakarta)?</p>
+                    <div class="input">
+                        <ul>
+                            <li><label><input type="radio" name="q1" value="a"> A. 1619</label></li>
+                            <li><label><input type="radio" name="q1" value="b"> B. 1620</label></li>
+                            <li><label><input type="radio" name="q1" value="c"> C. 1621</label></li>
+                            <li><label><input type="radio" name="q1" value="d"> D. 1622</label></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="section2">
+                    <p>Siapakah pahlawan nasional Indonesia yang terkenal sebagai "Si Pitung"?</p>
+                    <div class="input">
+                        <ul>
+                            <li><label><input type="radio" name="q2" value="a"> A. Muhamad ali</label></li>
+                            <li><label><input type="radio" name="q2" value="b"> B. Si doel</label></li>
+                            <li><label><input type="radio" name="q2" value="c"> C. Si Pitung adalah tokoh fiksi</label></li>
+                            <li><label><input type="radio" name="q2" value="d"> D. Raden aji pedemangan</label></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="section3">
+                    <p>Kapan dan di manakah dipa nusantara aidit di lahirkan?</p>
+                    <div class="input">
+                        <ul>
+                            <li><label><input type="radio" name="q3" value="a"> A. Jakarta 30 september 1923</label></li>
+                            <li><label><input type="radio" name="q3" value="b"> B. Boyolali 22 november 1923</label></li>
+                            <li><label><input type="radio" name="q3" value="c"> C. banda aceh 15 maret 1923 </label></li>
+                            <li><label><input type="radio" name="q3" value="d"> D. Tanjung Pandang,Belitung 30 Juli 1923</label></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="section4">
+                    <p>Apa yang dimaksud dengan "Politik Etis" yang diperkenalkan oleh pemerintah Belanda pada awal abad ke-20?</p>
+                    <div class="input">
+                        <ul>
+                            <li><label><input type="radio" name="q4" value="a"> A. Kebijakan untuk memberikan hak politik kepada pribumi</label></li>
+                            <li><label><input type="radio" name="q4" value="b"> B. Kebijakan untuk memberikan pendidikan gratis kepada pribumi</label></li>
+                            <li><label><input type="radio" name="q4" value="c"> C. Kebijakan untuk meningkatkan pengaruh politik Belanda di Indonesia </label></li>
+                            <li><label><input type="radio" name="q4" value="d"> D. Kebijakan untuk menekan gerakan kemerdekaan di Indonesia</label></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="section5">
+                    <p>Apa yang dimaksud dengan "Reformasi" dalam konteks sejarah Indonesia modern?</p>
+                    <div class="input">    
+                        <ul>
+                            <li><label><input type="radio" name="q5" value="a"> A. Gerakan yang bertujuan untuk mengembalikan kekuasaan ke tangan rakyat</label></li>
+                            <li><label><input type="radio" name="q5" value="b"> B. Gerakan yang bertujuan untuk mengembalikan kekuasaan kepada militer</label></li>
+                            <li><label><input type="radio" name="q5" value="c"> C. Gerakan yang bertujuan untuk memperkuat pemerintahan otoriter </label></li>
+                            <li><label><input type="radio" name="q5" value="d"> D. Gerakan yang bertujuan untuk membangun demokrasi terpimpin</label></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="button-soal">
+                <button id="prevBtn" onclick="prevSection()">Previous</button><br/>
+                <button id="nextBtn" onclick="nextSection()">Next</button>
+            </div>
+        </div>
+        <div id="scoreModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span><br />
+                <div id="scoreDisplay"></div>
+            </div>
+        </div>        
+    </div>
+    <script src="js/sejarah.js"></script>
+</body>
+
+</html>
